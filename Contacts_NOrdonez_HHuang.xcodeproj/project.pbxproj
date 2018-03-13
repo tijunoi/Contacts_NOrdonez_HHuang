@@ -7,14 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		204A07D02058342E00A2FDAD /* AllContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204A07CF2058342E00A2FDAD /* AllContactsTableViewController.swift */; };
 		20AB430620581EA30087D463 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AB430520581EA30087D463 /* AppDelegate.swift */; };
 		20AB430820581EA30087D463 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AB430720581EA30087D463 /* ViewController.swift */; };
 		20AB430B20581EA30087D463 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20AB430920581EA30087D463 /* Main.storyboard */; };
 		20AB430D20581EA30087D463 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20AB430C20581EA30087D463 /* Assets.xcassets */; };
 		20AB431020581EA30087D463 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20AB430E20581EA30087D463 /* LaunchScreen.storyboard */; };
+		20AB432320581F0A0087D463 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 20AB431920581F090087D463 /* FMDatabaseAdditions.m */; };
+		20AB432420581F0A0087D463 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 20AB431A20581F090087D463 /* FMDatabaseQueue.m */; };
+		20AB432520581F0A0087D463 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 20AB431E20581F0A0087D463 /* FMResultSet.m */; };
+		20AB432620581F0A0087D463 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 20AB432120581F0A0087D463 /* FMDatabasePool.m */; };
+		20AB432720581F0A0087D463 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 20AB432220581F0A0087D463 /* FMDatabase.m */; };
+		5241A5E6D13A2C7756D9E935 /* Pods_Contacts_NOrdonez_HHuang.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 991D62B6DA39630D4D7959C7 /* Pods_Contacts_NOrdonez_HHuang.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		204A07CF2058342E00A2FDAD /* AllContactsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllContactsTableViewController.swift; sourceTree = "<group>"; };
 		20AB430220581EA30087D463 /* Contacts_NOrdonez_HHuang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Contacts_NOrdonez_HHuang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20AB430520581EA30087D463 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20AB430720581EA30087D463 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +30,21 @@
 		20AB430C20581EA30087D463 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		20AB430F20581EA30087D463 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		20AB431120581EA30087D463 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20AB431720581F080087D463 /* Contacts_NOrdonez_HHuang-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Contacts_NOrdonez_HHuang-Bridging-Header.h"; sourceTree = "<group>"; };
+		20AB431820581F090087D463 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		20AB431920581F090087D463 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		20AB431A20581F090087D463 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		20AB431B20581F090087D463 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		20AB431C20581F090087D463 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		20AB431D20581F0A0087D463 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		20AB431E20581F0A0087D463 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		20AB431F20581F0A0087D463 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		20AB432020581F0A0087D463 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		20AB432120581F0A0087D463 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		20AB432220581F0A0087D463 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		8EA141C9C1FF64B7061C97A0 /* Pods-Contacts_NOrdonez_HHuang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Contacts_NOrdonez_HHuang.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Contacts_NOrdonez_HHuang/Pods-Contacts_NOrdonez_HHuang.debug.xcconfig"; sourceTree = "<group>"; };
+		991D62B6DA39630D4D7959C7 /* Pods_Contacts_NOrdonez_HHuang.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Contacts_NOrdonez_HHuang.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFCBFF7D2D855BB6F6B1238B /* Pods-Contacts_NOrdonez_HHuang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Contacts_NOrdonez_HHuang.release.xcconfig"; path = "Pods/Target Support Files/Pods-Contacts_NOrdonez_HHuang/Pods-Contacts_NOrdonez_HHuang.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +52,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5241A5E6D13A2C7756D9E935 /* Pods_Contacts_NOrdonez_HHuang.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E019BCA7D500E7906D09107 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				991D62B6DA39630D4D7959C7 /* Pods_Contacts_NOrdonez_HHuang.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		20AB42F920581EA30087D463 = {
 			isa = PBXGroup;
 			children = (
 				20AB430420581EA30087D463 /* Contacts_NOrdonez_HHuang */,
 				20AB430320581EA30087D463 /* Products */,
+				8BA895975DF5D2078E317E67 /* Pods */,
+				1E019BCA7D500E7906D09107 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +88,36 @@
 		20AB430420581EA30087D463 /* Contacts_NOrdonez_HHuang */ = {
 			isa = PBXGroup;
 			children = (
+				20AB431C20581F090087D463 /* FMDatabase.h */,
+				20AB432220581F0A0087D463 /* FMDatabase.m */,
+				20AB431820581F090087D463 /* FMDatabaseAdditions.h */,
+				20AB431920581F090087D463 /* FMDatabaseAdditions.m */,
+				20AB431F20581F0A0087D463 /* FMDatabasePool.h */,
+				20AB432120581F0A0087D463 /* FMDatabasePool.m */,
+				20AB432020581F0A0087D463 /* FMDatabaseQueue.h */,
+				20AB431A20581F090087D463 /* FMDatabaseQueue.m */,
+				20AB431B20581F090087D463 /* FMDB.h */,
+				20AB431D20581F0A0087D463 /* FMResultSet.h */,
+				20AB431E20581F0A0087D463 /* FMResultSet.m */,
 				20AB430520581EA30087D463 /* AppDelegate.swift */,
 				20AB430720581EA30087D463 /* ViewController.swift */,
 				20AB430920581EA30087D463 /* Main.storyboard */,
 				20AB430C20581EA30087D463 /* Assets.xcassets */,
 				20AB430E20581EA30087D463 /* LaunchScreen.storyboard */,
 				20AB431120581EA30087D463 /* Info.plist */,
+				20AB431720581F080087D463 /* Contacts_NOrdonez_HHuang-Bridging-Header.h */,
+				204A07CF2058342E00A2FDAD /* AllContactsTableViewController.swift */,
 			);
 			path = Contacts_NOrdonez_HHuang;
+			sourceTree = "<group>";
+		};
+		8BA895975DF5D2078E317E67 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8EA141C9C1FF64B7061C97A0 /* Pods-Contacts_NOrdonez_HHuang.debug.xcconfig */,
+				BFCBFF7D2D855BB6F6B1238B /* Pods-Contacts_NOrdonez_HHuang.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +127,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 20AB431420581EA30087D463 /* Build configuration list for PBXNativeTarget "Contacts_NOrdonez_HHuang" */;
 			buildPhases = (
+				B949F08F2ADA4511D57819B3 /* [CP] Check Pods Manifest.lock */,
 				20AB42FE20581EA30087D463 /* Sources */,
 				20AB42FF20581EA30087D463 /* Frameworks */,
 				20AB430020581EA30087D463 /* Resources */,
+				65068CFE9160718CF943E30E /* [CP] Embed Pods Frameworks */,
+				A1A21A3FA005E1514C52E9D8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -96,6 +155,7 @@
 				TargetAttributes = {
 					20AB430120581EA30087D463 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -131,13 +191,73 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		65068CFE9160718CF943E30E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Contacts_NOrdonez_HHuang/Pods-Contacts_NOrdonez_HHuang-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Contacts_NOrdonez_HHuang/Pods-Contacts_NOrdonez_HHuang-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A1A21A3FA005E1514C52E9D8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Contacts_NOrdonez_HHuang/Pods-Contacts_NOrdonez_HHuang-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B949F08F2ADA4511D57819B3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Contacts_NOrdonez_HHuang-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		20AB42FE20581EA30087D463 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				20AB430820581EA30087D463 /* ViewController.swift in Sources */,
+				20AB432620581F0A0087D463 /* FMDatabasePool.m in Sources */,
+				20AB432420581F0A0087D463 /* FMDatabaseQueue.m in Sources */,
+				20AB432720581F0A0087D463 /* FMDatabase.m in Sources */,
 				20AB430620581EA30087D463 /* AppDelegate.swift in Sources */,
+				20AB432320581F0A0087D463 /* FMDatabaseAdditions.m in Sources */,
+				204A07D02058342E00A2FDAD /* AllContactsTableViewController.swift in Sources */,
+				20AB432520581F0A0087D463 /* FMResultSet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,13 +392,17 @@
 		};
 		20AB431520581EA30087D463 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8EA141C9C1FF64B7061C97A0 /* Pods-Contacts_NOrdonez_HHuang.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Contacts_NOrdonez_HHuang/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "us.nilhangjie.Contacts-NOrdonez-HHuang";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Contacts_NOrdonez_HHuang/Contacts_NOrdonez_HHuang-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -286,13 +410,16 @@
 		};
 		20AB431620581EA30087D463 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFCBFF7D2D855BB6F6B1238B /* Pods-Contacts_NOrdonez_HHuang.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Contacts_NOrdonez_HHuang/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "us.nilhangjie.Contacts-NOrdonez-HHuang";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Contacts_NOrdonez_HHuang/Contacts_NOrdonez_HHuang-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
