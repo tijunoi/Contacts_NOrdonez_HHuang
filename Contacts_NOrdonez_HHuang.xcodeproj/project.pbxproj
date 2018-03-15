@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2041599820589811003E9C97 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2041599720589811003E9C97 /* TabBarController.swift */; };
 		204A07D02058342E00A2FDAD /* AllContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204A07CF2058342E00A2FDAD /* AllContactsTableViewController.swift */; };
+		2073BDCB205ABF1A00ECB572 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2073BDCA205ABF1A00ECB572 /* DBManager.swift */; };
+		2073BDCE205ACE6E00ECB572 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2073BDCD205ACE6E00ECB572 /* Contact.swift */; };
 		20AB430620581EA30087D463 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AB430520581EA30087D463 /* AppDelegate.swift */; };
-		20AB430820581EA30087D463 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AB430720581EA30087D463 /* ViewController.swift */; };
 		20AB430B20581EA30087D463 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20AB430920581EA30087D463 /* Main.storyboard */; };
 		20AB430D20581EA30087D463 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20AB430C20581EA30087D463 /* Assets.xcassets */; };
 		20AB431020581EA30087D463 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20AB430E20581EA30087D463 /* LaunchScreen.storyboard */; };
@@ -22,10 +24,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2041599720589811003E9C97 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		204A07CF2058342E00A2FDAD /* AllContactsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllContactsTableViewController.swift; sourceTree = "<group>"; };
+		2073BDCA205ABF1A00ECB572 /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
+		2073BDCD205ACE6E00ECB572 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		20AB430220581EA30087D463 /* Contacts_NOrdonez_HHuang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Contacts_NOrdonez_HHuang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20AB430520581EA30087D463 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		20AB430720581EA30087D463 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		20AB430A20581EA30087D463 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		20AB430C20581EA30087D463 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		20AB430F20581EA30087D463 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -67,6 +71,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		2073BDCC205ACE5C00ECB572 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				2073BDCD205ACE6E00ECB572 /* Contact.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
 		20AB42F920581EA30087D463 = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +100,7 @@
 		20AB430420581EA30087D463 /* Contacts_NOrdonez_HHuang */ = {
 			isa = PBXGroup;
 			children = (
+				2073BDCC205ACE5C00ECB572 /* model */,
 				20AB431C20581F090087D463 /* FMDatabase.h */,
 				20AB432220581F0A0087D463 /* FMDatabase.m */,
 				20AB431820581F090087D463 /* FMDatabaseAdditions.h */,
@@ -100,13 +113,14 @@
 				20AB431D20581F0A0087D463 /* FMResultSet.h */,
 				20AB431E20581F0A0087D463 /* FMResultSet.m */,
 				20AB430520581EA30087D463 /* AppDelegate.swift */,
-				20AB430720581EA30087D463 /* ViewController.swift */,
 				20AB430920581EA30087D463 /* Main.storyboard */,
 				20AB430C20581EA30087D463 /* Assets.xcassets */,
 				20AB430E20581EA30087D463 /* LaunchScreen.storyboard */,
 				20AB431120581EA30087D463 /* Info.plist */,
 				20AB431720581F080087D463 /* Contacts_NOrdonez_HHuang-Bridging-Header.h */,
 				204A07CF2058342E00A2FDAD /* AllContactsTableViewController.swift */,
+				2041599720589811003E9C97 /* TabBarController.swift */,
+				2073BDCA205ABF1A00ECB572 /* DBManager.swift */,
 			);
 			path = Contacts_NOrdonez_HHuang;
 			sourceTree = "<group>";
@@ -250,10 +264,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20AB430820581EA30087D463 /* ViewController.swift in Sources */,
 				20AB432620581F0A0087D463 /* FMDatabasePool.m in Sources */,
 				20AB432420581F0A0087D463 /* FMDatabaseQueue.m in Sources */,
+				2073BDCE205ACE6E00ECB572 /* Contact.swift in Sources */,
+				2041599820589811003E9C97 /* TabBarController.swift in Sources */,
 				20AB432720581F0A0087D463 /* FMDatabase.m in Sources */,
+				2073BDCB205ABF1A00ECB572 /* DBManager.swift in Sources */,
 				20AB430620581EA30087D463 /* AppDelegate.swift in Sources */,
 				20AB432320581F0A0087D463 /* FMDatabaseAdditions.m in Sources */,
 				204A07D02058342E00A2FDAD /* AllContactsTableViewController.swift in Sources */,
