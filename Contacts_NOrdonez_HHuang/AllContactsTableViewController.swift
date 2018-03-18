@@ -102,7 +102,6 @@ class AllContactsTableViewController: UITableViewController {
                 contacts = DBManager.shared.getContacts()
                 tableView.reloadData()
             }
-
         }
     }
     
