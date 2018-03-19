@@ -93,6 +93,34 @@ class AllContactsTableViewController: UITableViewController {
         }
     }
     
+    override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt
+        indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let button = UIContextualAction(style: .normal, title: "Add to favorite") {
+            (action, view, completionHandler) in
+            //Hacer algo
+            if let itemToFav = self.contacts?[indexPath.row] {
+                
+                var idcontacdo = itemToFav.id
+                if DBManager.shared.setFav(withId: idcontacdo){
+                    
+                }
+                
+                
+                
+            }
+            
+            
+            completionHandler(true)
+        }
+        button.backgroundColor = UIColor(red: 52/255, green: 120/255, blue: 246/255, alpha: 1)
+        
+        
+        let addToFavorite = UISwipeActionsConfiguration(actions: [button])
+        return addToFavorite
+    }
+    
+    
     @IBAction func backFromNewContact(segue: UIStoryboardSegue){
         if let aNewContact = newContact {
             //settear a nil para asignar luego otro new contact, sino se insertaria siempre el mismo

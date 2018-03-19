@@ -23,6 +23,7 @@
 		20AB432620581F0A0087D463 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 20AB432120581F0A0087D463 /* FMDatabasePool.m */; };
 		20AB432720581F0A0087D463 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 20AB432220581F0A0087D463 /* FMDatabase.m */; };
 		5241A5E6D13A2C7756D9E935 /* Pods_Contacts_NOrdonez_HHuang.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 991D62B6DA39630D4D7959C7 /* Pods_Contacts_NOrdonez_HHuang.framework */; };
+		AA9856FE205F1F3C006A33AF /* FavoriteContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9856FD205F1F3C006A33AF /* FavoriteContactsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		20AB432220581F0A0087D463 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
 		8EA141C9C1FF64B7061C97A0 /* Pods-Contacts_NOrdonez_HHuang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Contacts_NOrdonez_HHuang.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Contacts_NOrdonez_HHuang/Pods-Contacts_NOrdonez_HHuang.debug.xcconfig"; sourceTree = "<group>"; };
 		991D62B6DA39630D4D7959C7 /* Pods_Contacts_NOrdonez_HHuang.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Contacts_NOrdonez_HHuang.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA9856FD205F1F3C006A33AF /* FavoriteContactsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteContactsTableViewController.swift; sourceTree = "<group>"; };
 		BFCBFF7D2D855BB6F6B1238B /* Pods-Contacts_NOrdonez_HHuang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Contacts_NOrdonez_HHuang.release.xcconfig"; path = "Pods/Target Support Files/Pods-Contacts_NOrdonez_HHuang/Pods-Contacts_NOrdonez_HHuang.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,6 +129,7 @@
 				2041599720589811003E9C97 /* TabBarController.swift */,
 				2073BDCA205ABF1A00ECB572 /* DBManager.swift */,
 				2088D48A205D7D92006E9367 /* NewContactViewController.swift */,
+				AA9856FD205F1F3C006A33AF /* FavoriteContactsTableViewController.swift */,
 			);
 			path = Contacts_NOrdonez_HHuang;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 				2073BDCE205ACE6E00ECB572 /* Contact.swift in Sources */,
 				2041599820589811003E9C97 /* TabBarController.swift in Sources */,
 				20AB432720581F0A0087D463 /* FMDatabase.m in Sources */,
+				AA9856FE205F1F3C006A33AF /* FavoriteContactsTableViewController.swift in Sources */,
 				2073BDCB205ABF1A00ECB572 /* DBManager.swift in Sources */,
 				20AB430620581EA30087D463 /* AppDelegate.swift in Sources */,
 				20AB432320581F0A0087D463 /* FMDatabaseAdditions.m in Sources */,

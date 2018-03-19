@@ -77,9 +77,9 @@ class TabBarController: UITabBarController {
     
     func insertDemoData(in db: FMDatabase) {
         let demoInserts = [
-        "INSERT INTO CONTACTS (ID, NAME, LASTNAME, NUM1, NUM2, EMAIL, ISFAV) VALUES (1, 'Nil', 'Ordoñez', '+34686764028', null, 'nilordonez.7@gmail.com', 1);",
+        "INSERT INTO CONTACTS (ID, NAME, LASTNAME, NUM1, NUM2, EMAIL, ISFAV) VALUES (1, 'Nil', 'Ordoñez', '+34686764028', null, 'nilordonez.7@gmail.com', 0);",
         "INSERT INTO CONTACTS (ID, NAME, LASTNAME, NUM1, NUM2, EMAIL, ISFAV) VALUES (2, 'Juan', 'Palomo', '64737847', null, 'yomeloguiso@gmail.com', 0);",
-        "INSERT INTO CONTACTS (ID, NAME, LASTNAME, NUM1, NUM2, EMAIL, ISFAV) VALUES (3, 'Maria', 'Manzanares', '4234243', null, 'mariamagdalena@gmail.com', 0);",
+        "INSERT INTO CONTACTS (ID, NAME, LASTNAME, NUM1, NUM2, EMAIL, ISFAV) VALUES (3, 'Maria', 'Manzanares', '4234243', null, 'mariamagdalena@gmail.com', 1);",
         "INSERT INTO CONTACTS (ID, NAME, LASTNAME, NUM1, NUM2, EMAIL, ISFAV) VALUES (4, 'Ramona', 'Ramirez', '94783783', null, 'jamones96@mail.com', 0);"
         ]
         

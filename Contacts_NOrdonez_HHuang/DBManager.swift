@@ -98,6 +98,30 @@ class DBManager: NSObject {
 
         return contacts
     }
+    
+    
+    func setFav(withId: Int) -> Bool{
+        
+        if openDatabase(){
+            let queryUpdate = "UPDATE CONTACTS SET \(field_ContactIsFav) = true WHERE \(field_ContactID) = ?"
+            
+            
+            do{
+                try database.executeUpdate(queryUpdate, values: [1])
+                
+                
+            }catch{
+                print(error.localizedDescription)
+                database.close()
+                return false
+            }
+            database.close()
+        
+        }
+        return true
+    }
+        
+    
 
     func deleteContact(_ contactToRemove: Contact) -> Bool {
 

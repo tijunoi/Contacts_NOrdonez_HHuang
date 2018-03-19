@@ -178,7 +178,7 @@
         <!--FavoriteContacts-->
         <scene sceneID="zxj-kR-NXQ">
             <objects>
-                <tableViewController id="Dx5-aS-5yb" userLabel="FavoriteContacts" sceneMemberID="viewController">
+                <tableViewController id="Dx5-aS-5yb" userLabel="FavoriteContacts" customClass="FavoriteContactsTableViewController" customModule="Contacts_NOrdonez_HHuang" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="hIK-pf-VVx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
