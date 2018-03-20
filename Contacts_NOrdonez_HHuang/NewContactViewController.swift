@@ -128,8 +128,10 @@ class NewContactViewController: UIViewController, UITextFieldDelegate{
 
     @objc func keyboardWillHide(_ sender: Notification){
         UIView.animate(withDuration: 0.3, animations: {
-            self.contentHeightConstraint.constant -= self.keyboardHeight
-            self.scrollView.contentOffset = self.lastOffset
+            if let constant = self.keyboardHeight {
+                self.contentHeightConstraint.constant -= self.keyboardHeight
+                self.scrollView.contentOffset = self.lastOffset
+            }
         })
         keyboardHeight = nil
 

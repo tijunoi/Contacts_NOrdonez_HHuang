@@ -1,33 +1,31 @@
 //
-//  AllContactsTableViewController.swift
+//  FavoriteContactsTableViewController.swift
 //  Contacts_NOrdonez_HHuang
 //
-//  Created by Nil Ordoñez Romera on 13/3/18.
+//  Created by Nil Ordoñez Romera on 19/3/18.
 //  Copyright © 2018 NilHangjie. All rights reserved.
 //
 
 import UIKit
 
-class AllContactsTableViewController: UITableViewController {
+class FavoriteContactsTableViewController: UITableViewController {
 
     var contacts: [Contact]?
 
-    //Para insertar el nuevo coo cuando vuelva de new contact
-    var newContact: Contact?
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("se ha conectado la view")
+
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
+
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         self.navigationItem.leftBarButtonItem = self.editButtonItem
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
-        contacts = DBManager.shared.getContacts()
+        //Se recargan los contactos cuando aparece en la pantalla para tener siempre la información actualizada
+        contacts = DBManager.shared.getFavoriteContacts()
         tableView.reloadData()
     }
 
@@ -44,19 +42,19 @@ class AllContactsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let count = contacts?.count {
-            return count
+        // #warning Incomplete implementation, return the number of rows
+        if let contactos = contacts {
+            return contactos.count
         }
         return 0
     }
 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "AllContactCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FavoriteContactCell", for: indexPath)
 
         let item = contacts?[indexPath.row]
 
-        // let item: Contact = //contactManager.getContacts()[indexPath.row]
         // Configure the cell...
         // Update contact name
         cell.textLabel?.text = item?.fullName
@@ -79,11 +77,13 @@ class AllContactsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
-            if let itemToRemove = contacts?[indexPath.row] {
-                if DBManager.shared.deleteContact(itemToRemove) { //Solo se borra en la tableview si se ha borrado correctament en la bd, sino peta
+            if var itemToRemoveFromFavorites = contacts?[indexPath.row] {
+                itemToRemoveFromFavorites.isFav = false
+                if DBManager.shared.updateContact(itemToRemoveFromFavorites) {
                     contacts?.remove(at: indexPath.row)
                     tableView.deleteRows(at: [indexPath], with: .fade)
                 }
+
             }
             //Unwrappeo la array porque no se llamaría al método eliminar si no hubieran cells en la tableview, lo que significa que la array existe
 
@@ -91,47 +91,6 @@ class AllContactsTableViewController: UITableViewController {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }
     }
-
-    override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let button = UIContextualAction(style: .normal, title: "Add to favorite") {
-            (action, view, completionHandler) in
-            //Hacer algo
-            var contactToUpdate = self.contacts![indexPath.row]
-            contactToUpdate.isFav = true
-            if DBManager.shared.updateContact(contactToUpdate) {
-                self.contacts = DBManager.shared.getContacts()
-                self.tableView.reloadData()
-                completionHandler(true)
-            } else {
-                completionHandler(false)
-            }
-        }
-        button.backgroundColor = UIColor(red: 52 / 255, green: 120 / 255, blue: 246 / 255, alpha: 1)
-
-        if let contact = contacts?[indexPath.row] {
-            if let fav = contact.isFav {
-                if fav == true {
-                    return UISwipeActionsConfiguration(actions: [])
-                }
-            }
-        }
-        let addToFavorite = UISwipeActionsConfiguration(actions: [button])
-        return addToFavorite
-    }
-
-    @IBAction func backFromNewContact(segue: UIStoryboardSegue){
-        if let aNewContact = newContact {
-            //settear a nil para asignar luego otro new contact, sino se insertaria siempre el mismo
-            self.newContact = nil
-
-            if DBManager.shared.insertContact(aNewContact) {
-                contacts = DBManager.shared.getContacts()
-                tableView.reloadData()
-            }
-        }
-    }
-    
-    
 
 
     /*
@@ -162,6 +121,8 @@ class AllContactsTableViewController: UITableViewController {
                 }
             }
         }
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
     }
 
 

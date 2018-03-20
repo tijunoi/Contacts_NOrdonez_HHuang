@@ -16,8 +16,8 @@ struct Contact {
     var num2: String?
     var email: String?
     var isFav: Bool?
-    
-    var fullName: String? {
+
+    var fullName: String {
         return "\(name ?? "") \(lastName ?? "")"
     }
 }

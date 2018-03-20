@@ -99,6 +99,54 @@ class DBManager: NSObject {
         return contacts
     }
 
+    func getFavoriteContacts() -> [Contact] {
+        var contacts: [Contact]! = [Contact]()
+
+        if openDatabase() {
+            let query: String = "SELECT * FROM CONTACTS  WHERE \(field_ContactIsFav) = 1 ORDER BY \(field_ContactName) asc"
+
+
+//            if let result = database.executeQuery(query, withArgumentsInArray: nil) {
+//
+//            }
+            //No funciona con swift optionals, de momento lo hacemos con try catch
+            do {
+                let result = try database.executeQuery(query, values: nil)
+
+                while result.next() {
+
+                    let isFavInt = result.int(forColumn: field_ContactIsFav)
+                    var isFav: Bool
+                    switch isFavInt {
+                    case 0:
+                        isFav = false
+                    case 1:
+                        isFav = true
+                    default:
+                        isFav = false
+                    }
+                    let contact = Contact(id: Int(result.int(forColumn: field_ContactID)),
+                            name: result.string(forColumn: field_ContactName),
+                            lastName: result.string(forColumn: field_ContactLastName),
+                            num1: result.string(forColumn: field_ContactNum1),
+                            num2: result.string(forColumn: field_ContactNum2),
+                            email: result.string(forColumn: field_ContactEmail),
+                            isFav: isFav)
+
+                    /* if contacts == nil {
+                         contacts = [Contact]()
+                     }*/
+                    contacts.append(contact)
+                }
+            } catch {
+                print(error.localizedDescription)
+            }
+            database.close()
+        }
+
+        return contacts
+    }
+
     func deleteContact(_ contactToRemove: Contact) -> Bool {
 
         if openDatabase() {

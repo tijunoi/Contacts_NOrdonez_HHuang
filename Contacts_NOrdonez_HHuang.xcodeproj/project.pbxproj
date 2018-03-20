@@ -13,6 +13,8 @@
 		2073BDCE205ACE6E00ECB572 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2073BDCD205ACE6E00ECB572 /* Contact.swift */; };
 		2088D48B205D7D92006E9367 /* NewContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2088D48A205D7D92006E9367 /* NewContactViewController.swift */; };
 		2088D48D205EE616006E9367 /* contact_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2088D48C205EE615006E9367 /* contact_icon.png */; };
+		2088D48F205F3111006E9367 /* FavoriteContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2088D48E205F3111006E9367 /* FavoriteContactsTableViewController.swift */; };
+		20A6EE88206164B8003B38D3 /* ContactDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A6EE87206164B8003B38D3 /* ContactDetailViewController.swift */; };
 		20AB430620581EA30087D463 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AB430520581EA30087D463 /* AppDelegate.swift */; };
 		20AB430B20581EA30087D463 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20AB430920581EA30087D463 /* Main.storyboard */; };
 		20AB430D20581EA30087D463 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20AB430C20581EA30087D463 /* Assets.xcassets */; };
@@ -32,6 +34,8 @@
 		2073BDCD205ACE6E00ECB572 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		2088D48A205D7D92006E9367 /* NewContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewContactViewController.swift; sourceTree = "<group>"; };
 		2088D48C205EE615006E9367 /* contact_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = contact_icon.png; sourceTree = "<group>"; };
+		2088D48E205F3111006E9367 /* FavoriteContactsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteContactsTableViewController.swift; sourceTree = "<group>"; };
+		20A6EE87206164B8003B38D3 /* ContactDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailViewController.swift; sourceTree = "<group>"; };
 		20AB430220581EA30087D463 /* Contacts_NOrdonez_HHuang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Contacts_NOrdonez_HHuang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20AB430520581EA30087D463 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20AB430A20581EA30087D463 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -118,6 +122,7 @@
 				20AB431E20581F0A0087D463 /* FMResultSet.m */,
 				20AB430520581EA30087D463 /* AppDelegate.swift */,
 				20AB430920581EA30087D463 /* Main.storyboard */,
+				20A6EE87206164B8003B38D3 /* ContactDetailViewController.swift */,
 				20AB430C20581EA30087D463 /* Assets.xcassets */,
 				2088D48C205EE615006E9367 /* contact_icon.png */,
 				20AB430E20581EA30087D463 /* LaunchScreen.storyboard */,
@@ -127,6 +132,7 @@
 				2041599720589811003E9C97 /* TabBarController.swift */,
 				2073BDCA205ABF1A00ECB572 /* DBManager.swift */,
 				2088D48A205D7D92006E9367 /* NewContactViewController.swift */,
+				2088D48E205F3111006E9367 /* FavoriteContactsTableViewController.swift */,
 			);
 			path = Contacts_NOrdonez_HHuang;
 			sourceTree = "<group>";
@@ -277,7 +283,9 @@
 				2073BDCE205ACE6E00ECB572 /* Contact.swift in Sources */,
 				2041599820589811003E9C97 /* TabBarController.swift in Sources */,
 				20AB432720581F0A0087D463 /* FMDatabase.m in Sources */,
+				2088D48F205F3111006E9367 /* FavoriteContactsTableViewController.swift in Sources */,
 				2073BDCB205ABF1A00ECB572 /* DBManager.swift in Sources */,
+				20A6EE88206164B8003B38D3 /* ContactDetailViewController.swift in Sources */,
 				20AB430620581EA30087D463 /* AppDelegate.swift in Sources */,
 				20AB432320581F0A0087D463 /* FMDatabaseAdditions.m in Sources */,
 				204A07D02058342E00A2FDAD /* AllContactsTableViewController.swift in Sources */,
